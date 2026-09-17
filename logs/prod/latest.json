@@ -1,11 +1,11 @@
 {
   "trigger": "run_validation_button",
-  "generated_at": "2026-09-17T19:16:20.289559+00:00",
+  "generated_at": "2026-09-17T19:32:10.629689+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "10/12 sources validated",
+  "coverage": "11/12 sources validated",
   "source_count": 12,
-  "passed": 10,
+  "passed": 11,
   "sources": [
     {
       "source": "jc_cost",
@@ -297,18 +297,14 @@
     {
       "source": "ado",
       "category": "api",
-      "status": "fail",
-      "summary": "3/4 checks passed",
+      "status": "pass",
+      "summary": "4/4 checks passed",
       "checks": [
         {
           "id": "ado.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 175.0,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "ado.work_items",
