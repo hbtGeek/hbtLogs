@@ -1,0 +1,539 @@
+{
+  "trigger": "manual",
+  "generated_at": "2026-09-17T16:22:57.252505+00:00",
+  "environment": "dev",
+  "overall": "needs_attention",
+  "coverage": "5/12 sources validated",
+  "source_count": 12,
+  "passed": 5,
+  "sources": [
+    {
+      "source": "jc_cost",
+      "category": "upload",
+      "status": "fail",
+      "summary": "1/5 checks passed \u00b7 2147 discrepancies",
+      "checks": [
+        {
+          "id": "jc_cost.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "file_rows": 2476,
+            "app_rows": 2381,
+            "accumulates": false
+          }
+        },
+        {
+          "id": "jc_cost.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "missing_from_app": 552,
+            "extra_in_app": 457
+          }
+        },
+        {
+          "id": "jc_cost.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "value_mismatches": 1545
+          }
+        },
+        {
+          "id": "jc_cost.totals",
+          "name": "independent column totals match the app",
+          "layer": "groundedness",
+          "status": "fail",
+          "metrics": {
+            "columns_checked": 8
+          }
+        }
+      ],
+      "flagged_jobs": [
+        "400.0155",
+        "400.1000",
+        "400.7055",
+        "500.0580",
+        "534.0252",
+        "534.0253",
+        "534.0261",
+        "534.0262",
+        "534.0263",
+        "534.0264",
+        "534.0276",
+        "534.0281",
+        "534.0282"
+      ],
+      "discrepancy_count": 2147
+    },
+    {
+      "source": "pm_grid",
+      "category": "upload",
+      "status": "fail",
+      "summary": "1/5 checks passed \u00b7 31 discrepancies",
+      "checks": [
+        {
+          "id": "pm_grid.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.row_count",
+          "name": "this file's rows are all present (app accumulates more)",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "file_rows": 71,
+            "app_rows": 68,
+            "accumulates": true
+          }
+        },
+        {
+          "id": "pm_grid.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "missing_from_app": 20,
+            "extra_in_app": 17
+          }
+        },
+        {
+          "id": "pm_grid.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "value_mismatches": 11
+          }
+        },
+        {
+          "id": "pm_grid.groundedness",
+          "name": "this file's jobs are served verbatim",
+          "layer": "groundedness",
+          "status": "fail",
+          "metrics": {
+            "file_jobs": 71,
+            "matched": 51,
+            "app_total_jobs": 68
+          }
+        }
+      ],
+      "flagged_jobs": [
+        "400.0155",
+        "400.1",
+        "400.7055",
+        "534.0261",
+        "534.0262",
+        "534.0276",
+        "534.0282",
+        "534.0283",
+        "534.0288",
+        "551.0222",
+        "551.026",
+        "551.0261",
+        "551.0262",
+        "551.027",
+        "551.028",
+        "551.0283",
+        "551.0284",
+        "551.0287",
+        "551.0288",
+        "551.0289",
+        "551.0292",
+        "551.0293",
+        "551.0294",
+        "551.0295",
+        "551.0296",
+        "551.0299",
+        "551.03",
+        "551.0303",
+        "551.0311",
+        "551.0314",
+        "551.0315"
+      ],
+      "discrepancy_count": 31
+    },
+    {
+      "source": "contract_profit",
+      "category": "upload",
+      "status": "fail",
+      "summary": "1/5 checks passed \u00b7 318 discrepancies",
+      "checks": [
+        {
+          "id": "contract_profit.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "file_rows": 73,
+            "app_rows": 65,
+            "accumulates": false
+          }
+        },
+        {
+          "id": "contract_profit.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "missing_from_app": 24,
+            "extra_in_app": 16
+          }
+        },
+        {
+          "id": "contract_profit.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "value_mismatches": 278
+          }
+        },
+        {
+          "id": "contract_profit.totals",
+          "name": "independent header-anchored totals match the app",
+          "layer": "groundedness",
+          "status": "fail",
+          "metrics": {
+            "columns_checked": 5
+          }
+        }
+      ],
+      "flagged_jobs": [
+        "534.0257",
+        "534.0261",
+        "534.0262",
+        "534.0276",
+        "534.0281",
+        "534.0282",
+        "534.0283",
+        "534.0285",
+        "534.0286",
+        "534.0287",
+        "534.0288",
+        "551.0222",
+        "551.0225",
+        "551.0226",
+        "551.0227",
+        "551.0228",
+        "551.0230",
+        "551.0232",
+        "551.0237",
+        "551.0238",
+        "551.0239",
+        "551.0240",
+        "551.0242",
+        "551.0247",
+        "551.0250",
+        "551.0252",
+        "551.0254",
+        "551.0260",
+        "551.0261",
+        "551.0262",
+        "551.0265",
+        "551.0270",
+        "551.0271",
+        "551.0275",
+        "551.0277",
+        "551.0278",
+        "551.0280",
+        "551.0281",
+        "551.0282",
+        "551.0283",
+        "551.0284",
+        "551.0285",
+        "551.0287",
+        "551.0288"
+      ],
+      "discrepancy_count": 318
+    },
+    {
+      "source": "jc_detail",
+      "category": "upload",
+      "status": "pass",
+      "summary": "4/4 checks passed",
+      "checks": [
+        {
+          "id": "jc_detail.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.fidelity",
+          "name": "every transaction matches the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.totals",
+          "name": "independent hours & cost totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "efficiency",
+      "category": "upload",
+      "status": "pass",
+      "summary": "5/5 checks passed",
+      "checks": [
+        {
+          "id": "efficiency.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.row_count",
+          "name": "this file's rows are all present (app accumulates more)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.no_computed",
+          "name": "no synthetic/computed rows in the app",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "manpower_forecast",
+      "category": "upload",
+      "status": "fail",
+      "summary": "2/3 checks passed \u00b7 7 discrepancies",
+      "checks": [
+        {
+          "id": "manpower_forecast.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "manpower.drift",
+          "name": "app payload equals a fresh parse of the file",
+          "layer": "drift",
+          "status": "fail",
+          "metrics": {
+            "file_jobs": 20
+          }
+        },
+        {
+          "id": "manpower.consistency",
+          "name": "no job has a zero/broken monthly grid",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 7
+    },
+    {
+      "source": "vista_job_financials",
+      "category": "accounting",
+      "status": "fail",
+      "summary": "2/3 checks passed",
+      "checks": [
+        {
+          "id": "vista_job_financials.freshness",
+          "name": "accounting snapshot is recent",
+          "layer": "freshness",
+          "status": "fail",
+          "metrics": {
+            "snapshot_age_hours": 168.3,
+            "sla_hours": 15,
+            "table_materialized_from_latest": false
+          }
+        },
+        {
+          "id": "vista_job_financials.row_count",
+          "name": "table row count matches the snapshot",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "vista_job_financials.totals",
+          "name": "column totals match the snapshot",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "vista_committed_po",
+      "category": "accounting",
+      "status": "fail",
+      "summary": "2/3 checks passed",
+      "checks": [
+        {
+          "id": "vista_committed_po.freshness",
+          "name": "accounting snapshot is recent",
+          "layer": "freshness",
+          "status": "fail",
+          "metrics": {
+            "snapshot_age_hours": 168.4,
+            "sla_hours": 15,
+            "table_materialized_from_latest": true
+          }
+        },
+        {
+          "id": "vista_committed_po.row_count",
+          "name": "table row count matches the snapshot",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "vista_committed_po.totals",
+          "name": "column totals match the snapshot",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "ado",
+      "category": "api",
+      "status": "fail",
+      "summary": "3/4 checks passed",
+      "checks": [
+        {
+          "id": "ado.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "fail",
+          "metrics": {
+            "age_hours": 172.1,
+            "sla_hours": 12
+          }
+        },
+        {
+          "id": "ado.work_items",
+          "name": "work items present, uniquely keyed, non-null id",
+          "layer": "integrity",
+          "status": "pass"
+        },
+        {
+          "id": "ado.sprints",
+          "name": "sprints uniquely keyed",
+          "layer": "integrity",
+          "status": "pass"
+        },
+        {
+          "id": "ado.capacity",
+          "name": "sprint-capacity rows present",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "project_schedule",
+      "category": "api",
+      "status": "pass",
+      "summary": "2/2 checks passed",
+      "checks": [
+        {
+          "id": "project_schedule.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "project_schedule.integrity",
+          "name": "rows present & uniquely keyed (sheet+row)",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "smartsheet_eo",
+      "category": "api",
+      "status": "pass",
+      "summary": "2/2 checks passed",
+      "checks": [
+        {
+          "id": "smartsheet_eo.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "smartsheet_eo.integrity",
+          "name": "rows present, uniquely keyed, valid sheet_type",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "entra",
+      "category": "api",
+      "status": "pass",
+      "summary": "1/1 checks passed",
+      "checks": [
+        {
+          "id": "entra.identity",
+          "name": "active mappings present, no duplicate identity keys",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    }
+  ],
+  "note": "Redacted for public sharing: job numbers + pass/fail + counts only \u2014 no financial figures, names, file names, or raw values."
+}
