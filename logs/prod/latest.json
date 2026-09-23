@@ -1,6 +1,6 @@
 {
   "trigger": "accounting_ingest",
-  "generated_at": "2026-09-22T18:04:05.236081+00:00",
+  "generated_at": "2026-09-23T06:03:39.395984+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "11/12 sources validated",
@@ -275,8 +275,8 @@
           "layer": "drift",
           "status": "fail",
           "metrics": {
-            "snapshot_rows": 64930,
-            "table_rows": 259720,
+            "snapshot_rows": 64950,
+            "table_rows": 194850,
             "materialized_from_latest": true
           }
         },
