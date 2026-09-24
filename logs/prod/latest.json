@@ -1,11 +1,11 @@
 {
   "trigger": "report_upload:vista",
-  "generated_at": "2026-09-24T23:37:55.252661+00:00",
+  "generated_at": "2026-09-24T23:38:31.273036+00:00",
   "environment": "prod",
-  "overall": "needs_attention",
-  "coverage": "11/12 sources validated",
+  "overall": "error",
+  "coverage": "10/12 sources validated",
   "source_count": 12,
-  "passed": 11,
+  "passed": 10,
   "sources": [
     {
       "source": "jc_cost",
@@ -93,38 +93,14 @@
     {
       "source": "contract_profit",
       "category": "upload",
-      "status": "pass",
-      "summary": "5/5 checks passed",
+      "status": "error",
+      "summary": "0/1 checks passed",
       "checks": [
         {
-          "id": "contract_profit.provenance",
-          "name": "compared file is the one the app loaded",
-          "layer": "provenance",
-          "status": "pass"
-        },
-        {
-          "id": "contract_profit.row_count",
-          "name": "row count matches the file",
-          "layer": "drift",
-          "status": "pass"
-        },
-        {
-          "id": "contract_profit.coverage",
-          "name": "every file row is present in the app",
-          "layer": "drift",
-          "status": "pass"
-        },
-        {
-          "id": "contract_profit.fidelity",
-          "name": "every value equals the file (verbatim)",
-          "layer": "drift",
-          "status": "pass"
-        },
-        {
-          "id": "contract_profit.totals",
-          "name": "independent header-anchored totals match the app",
-          "layer": "groundedness",
-          "status": "pass"
+          "id": "contract_profit.run",
+          "name": "validator ran",
+          "layer": "integrity",
+          "status": "error"
         }
       ],
       "flagged_jobs": [],
