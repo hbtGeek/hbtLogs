@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_refresh",
-  "generated_at": "2026-09-24T23:01:59.704631+00:00",
+  "trigger": "report_upload:vista",
+  "generated_at": "2026-09-24T23:35:27.858289+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "11/12 sources validated",
