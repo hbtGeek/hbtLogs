@@ -1,17 +1,17 @@
 {
   "trigger": "accounting_refresh",
-  "generated_at": "2026-09-24T19:00:17.470013+00:00",
+  "generated_at": "2026-09-24T23:01:59.704631+00:00",
   "environment": "prod",
-  "overall": "validated",
-  "coverage": "12/12 sources validated",
+  "overall": "needs_attention",
+  "coverage": "11/12 sources validated",
   "source_count": 12,
-  "passed": 12,
+  "passed": 11,
   "sources": [
     {
       "source": "jc_cost",
       "category": "upload",
-      "status": "pass",
-      "summary": "5/5 checks passed",
+      "status": "fail",
+      "summary": "4/5 checks passed",
       "checks": [
         {
           "id": "jc_cost.provenance",
@@ -41,7 +41,10 @@
           "id": "jc_cost.totals",
           "name": "independent column totals match the app",
           "layer": "groundedness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "columns_checked": 8
+          }
         }
       ],
       "flagged_jobs": [],
