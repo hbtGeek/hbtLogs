@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_refresh",
-  "generated_at": "2026-09-25T12:23:51.619926+00:00",
+  "trigger": "report_upload:manpower_forecast",
+  "generated_at": "2026-09-25T13:33:32.971289+00:00",
   "environment": "prod",
   "overall": "validated",
   "coverage": "12/12 sources validated",
@@ -11,7 +11,7 @@
       "source": "jc_cost",
       "category": "upload",
       "status": "pass",
-      "summary": "6/6 checks passed",
+      "summary": "8/8 checks passed",
       "checks": [
         {
           "id": "jc_cost.provenance",
@@ -48,6 +48,18 @@
           "name": "app captured every cost line the report lists (parser-independent count)",
           "layer": "groundedness",
           "status": "pass"
+        },
+        {
+          "id": "jc_cost.grand_total",
+          "name": "app totals appear in the report's printed Grand Total row",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -57,7 +69,7 @@
       "source": "pm_grid",
       "category": "upload",
       "status": "pass",
-      "summary": "5/5 checks passed",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "pm_grid.provenance",
@@ -88,6 +100,12 @@
           "name": "this file's jobs are served verbatim",
           "layer": "groundedness",
           "status": "pass"
+        },
+        {
+          "id": "pm_grid.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -97,7 +115,7 @@
       "source": "contract_profit",
       "category": "upload",
       "status": "pass",
-      "summary": "5/5 checks passed",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "contract_profit.provenance",
@@ -128,6 +146,12 @@
           "name": "independent header-anchored totals match the app",
           "layer": "groundedness",
           "status": "pass"
+        },
+        {
+          "id": "contract_profit.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -137,7 +161,7 @@
       "source": "jc_detail",
       "category": "upload",
       "status": "pass",
-      "summary": "4/4 checks passed",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "jc_detail.provenance",
@@ -162,6 +186,18 @@
           "name": "independent hours & cost totals match the app",
           "layer": "groundedness",
           "status": "pass"
+        },
+        {
+          "id": "jc_detail.completeness",
+          "name": "app captured every transaction the CSV lists (parser-independent count)",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -171,7 +207,7 @@
       "source": "efficiency",
       "category": "upload",
       "status": "pass",
-      "summary": "5/5 checks passed",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "efficiency.provenance",
@@ -202,6 +238,12 @@
           "name": "no synthetic/computed rows in the app",
           "layer": "integrity",
           "status": "pass"
+        },
+        {
+          "id": "efficiency.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -211,7 +253,7 @@
       "source": "manpower_forecast",
       "category": "upload",
       "status": "pass",
-      "summary": "3/3 checks passed",
+      "summary": "4/4 checks passed",
       "checks": [
         {
           "id": "manpower_forecast.provenance",
@@ -229,6 +271,12 @@
           "id": "manpower.consistency",
           "name": "no job has a zero/broken monthly grid",
           "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "manpower_forecast.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
           "status": "pass"
         }
       ],
