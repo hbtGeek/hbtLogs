@@ -1,0 +1,438 @@
+{
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-09-25T18:03:55.666103+00:00",
+  "environment": "prod",
+  "overall": "validated",
+  "coverage": "12/12 sources validated",
+  "source_count": 12,
+  "passed": 12,
+  "sources": [
+    {
+      "source": "jc_cost",
+      "category": "upload",
+      "status": "pass",
+      "summary": "8/8 checks passed",
+      "checks": [
+        {
+          "id": "jc_cost.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.totals",
+          "name": "independent column totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.completeness",
+          "name": "app captured every cost line the report lists (parser-independent count)",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.grand_total",
+          "name": "app totals appear in the report's printed Grand Total row",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_cost.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "pm_grid",
+      "category": "upload",
+      "status": "pass",
+      "summary": "6/6 checks passed",
+      "checks": [
+        {
+          "id": "pm_grid.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.row_count",
+          "name": "this file's rows are all present (app accumulates more)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.groundedness",
+          "name": "this file's jobs are served verbatim",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "pm_grid.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "contract_profit",
+      "category": "upload",
+      "status": "pass",
+      "summary": "6/6 checks passed",
+      "checks": [
+        {
+          "id": "contract_profit.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.totals",
+          "name": "independent header-anchored totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "jc_detail",
+      "category": "upload",
+      "status": "pass",
+      "summary": "6/6 checks passed",
+      "checks": [
+        {
+          "id": "jc_detail.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.fidelity",
+          "name": "every transaction matches the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.totals",
+          "name": "independent hours & cost totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.completeness",
+          "name": "app captured every transaction the CSV lists (parser-independent count)",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "jc_detail.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "efficiency",
+      "category": "upload",
+      "status": "pass",
+      "summary": "6/6 checks passed",
+      "checks": [
+        {
+          "id": "efficiency.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.row_count",
+          "name": "this file's rows are all present (app accumulates more)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.no_computed",
+          "name": "no synthetic/computed rows in the app",
+          "layer": "integrity",
+          "status": "pass"
+        },
+        {
+          "id": "efficiency.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "manpower_forecast",
+      "category": "upload",
+      "status": "pass",
+      "summary": "4/4 checks passed",
+      "checks": [
+        {
+          "id": "manpower_forecast.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "manpower.drift",
+          "name": "app payload equals a fresh parse of the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "manpower.consistency",
+          "name": "no job has a zero/broken monthly grid",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "manpower_forecast.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "vista_job_financials",
+      "category": "accounting",
+      "status": "pass",
+      "summary": "3/3 checks passed",
+      "checks": [
+        {
+          "id": "vista_job_financials.freshness",
+          "name": "accounting snapshot is recent",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "vista_job_financials.row_count",
+          "name": "table row count matches the snapshot",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "vista_job_financials.totals",
+          "name": "column totals match the snapshot",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "vista_committed_po",
+      "category": "accounting",
+      "status": "pass",
+      "summary": "3/3 checks passed",
+      "checks": [
+        {
+          "id": "vista_committed_po.freshness",
+          "name": "accounting snapshot is recent",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "vista_committed_po.row_count",
+          "name": "table row count matches the snapshot",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "vista_committed_po.totals",
+          "name": "column totals match the snapshot",
+          "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "ado",
+      "category": "api",
+      "status": "pass",
+      "summary": "4/4 checks passed",
+      "checks": [
+        {
+          "id": "ado.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "ado.work_items",
+          "name": "work items present, uniquely keyed, non-null id",
+          "layer": "integrity",
+          "status": "pass"
+        },
+        {
+          "id": "ado.sprints",
+          "name": "sprints uniquely keyed",
+          "layer": "integrity",
+          "status": "pass"
+        },
+        {
+          "id": "ado.capacity",
+          "name": "sprint-capacity rows present",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "project_schedule",
+      "category": "api",
+      "status": "pass",
+      "summary": "2/2 checks passed",
+      "checks": [
+        {
+          "id": "project_schedule.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "project_schedule.integrity",
+          "name": "rows present & uniquely keyed (sheet+row)",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "smartsheet_eo",
+      "category": "api",
+      "status": "pass",
+      "summary": "2/2 checks passed",
+      "checks": [
+        {
+          "id": "smartsheet_eo.freshness",
+          "name": "synced within 12h",
+          "layer": "freshness",
+          "status": "pass"
+        },
+        {
+          "id": "smartsheet_eo.integrity",
+          "name": "rows present, uniquely keyed, valid sheet_type",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "entra",
+      "category": "api",
+      "status": "pass",
+      "summary": "1/1 checks passed",
+      "checks": [
+        {
+          "id": "entra.identity",
+          "name": "active mappings present, no duplicate identity keys",
+          "layer": "integrity",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    }
+  ],
+  "note": "Redacted for public sharing: job numbers + pass/fail + counts only \u2014 no financial figures, names, file names, or raw values."
+}
