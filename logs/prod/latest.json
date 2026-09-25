@@ -1,6 +1,6 @@
 {
-  "trigger": "run_validation_button",
-  "generated_at": "2026-09-25T12:14:34.895967+00:00",
+  "trigger": "accounting_refresh",
+  "generated_at": "2026-09-25T12:23:51.619926+00:00",
   "environment": "prod",
   "overall": "validated",
   "coverage": "12/12 sources validated",
