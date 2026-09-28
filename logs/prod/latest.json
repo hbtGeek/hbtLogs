@@ -1,11 +1,11 @@
 {
   "trigger": "accounting_refresh",
-  "generated_at": "2026-09-28T13:55:54.808644+00:00",
+  "generated_at": "2026-09-28T14:49:03.564894+00:00",
   "environment": "prod",
   "overall": "validated",
-  "coverage": "12/12 sources validated",
-  "source_count": 12,
-  "passed": 12,
+  "coverage": "13/13 sources validated",
+  "source_count": 13,
+  "passed": 13,
   "sources": [
     {
       "source": "jc_cost",
@@ -333,6 +333,22 @@
           "id": "vista_committed_po.totals",
           "name": "column totals match the snapshot",
           "layer": "groundedness",
+          "status": "pass"
+        }
+      ],
+      "flagged_jobs": [],
+      "discrepancy_count": 0
+    },
+    {
+      "source": "accounting_lake_freshness",
+      "category": "accounting",
+      "status": "pass",
+      "summary": "1/1 checks passed",
+      "checks": [
+        {
+          "id": "accounting_lake.no_stale_sources",
+          "name": "every accounting lake source refreshed within 26h",
+          "layer": "freshness",
           "status": "pass"
         }
       ],
