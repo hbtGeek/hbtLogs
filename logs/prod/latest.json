@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_refresh",
-  "generated_at": "2026-09-28T16:13:18.558481+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-09-28T18:03:39.349439+00:00",
   "environment": "prod",
   "overall": "validated",
   "coverage": "13/13 sources validated",
