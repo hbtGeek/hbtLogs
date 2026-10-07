@@ -1,11 +1,11 @@
 {
-  "trigger": "accounting_ingest",
-  "generated_at": "2026-10-07T18:03:53.558378+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-10-07T18:33:41.337837+00:00",
   "environment": "prod",
-  "overall": "validated",
-  "coverage": "13/13 sources validated",
+  "overall": "needs_attention",
+  "coverage": "12/13 sources validated",
   "source_count": 13,
-  "passed": 13,
+  "passed": 12,
   "sources": [
     {
       "source": "jc_cost",
@@ -436,14 +436,19 @@
     {
       "source": "entra",
       "category": "api",
-      "status": "pass",
-      "summary": "1/1 checks passed",
+      "status": "fail",
+      "summary": "0/1 checks passed",
       "checks": [
         {
           "id": "entra.identity",
           "name": "active mappings present, no duplicate identity keys",
           "layer": "integrity",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "active_mappings": 145,
+            "duplicate_entra_oid": 4,
+            "duplicate_azure_email": 0
+          }
         }
       ],
       "flagged_jobs": [],
