@@ -1,6 +1,6 @@
 {
-  "trigger": "run_validation_button",
-  "generated_at": "2026-10-07T19:45:20.213541+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-10-08T00:33:29.342016+00:00",
   "environment": "prod",
   "overall": "validated",
   "coverage": "13/13 sources validated",
