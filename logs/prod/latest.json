@@ -1,11 +1,11 @@
 {
   "trigger": "scheduled",
-  "generated_at": "2026-10-10T06:33:23.941434+00:00",
+  "generated_at": "2026-10-10T12:33:31.538636+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "11/13 sources validated",
+  "coverage": "10/13 sources validated",
   "source_count": 13,
-  "passed": 11,
+  "passed": 10,
   "sources": [
     {
       "source": "jc_cost",
@@ -286,14 +286,19 @@
     {
       "source": "vista_job_financials",
       "category": "accounting",
-      "status": "pass",
-      "summary": "3/3 checks passed",
+      "status": "fail",
+      "summary": "2/3 checks passed",
       "checks": [
         {
           "id": "vista_job_financials.freshness",
           "name": "accounting snapshot is recent",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "snapshot_age_hours": 20.3,
+            "sla_hours": 15,
+            "table_materialized_from_latest": true
+          }
         },
         {
           "id": "vista_job_financials.row_count",
@@ -323,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 19.6,
+            "snapshot_age_hours": 25.6,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
