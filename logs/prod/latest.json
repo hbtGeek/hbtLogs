@@ -1,11 +1,11 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-10-10T00:33:27.281549+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-10-10T06:03:46.427597+00:00",
   "environment": "prod",
-  "overall": "validated",
-  "coverage": "13/13 sources validated",
+  "overall": "needs_attention",
+  "coverage": "11/13 sources validated",
   "source_count": 13,
-  "passed": 13,
+  "passed": 11,
   "sources": [
     {
       "source": "jc_cost",
@@ -314,14 +314,19 @@
     {
       "source": "vista_committed_po",
       "category": "accounting",
-      "status": "pass",
-      "summary": "3/3 checks passed",
+      "status": "fail",
+      "summary": "2/3 checks passed",
       "checks": [
         {
           "id": "vista_committed_po.freshness",
           "name": "accounting snapshot is recent",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "snapshot_age_hours": 19.1,
+            "sla_hours": 15,
+            "table_materialized_from_latest": true
+          }
         },
         {
           "id": "vista_committed_po.row_count",
@@ -342,14 +347,17 @@
     {
       "source": "accounting_lake_freshness",
       "category": "accounting",
-      "status": "pass",
-      "summary": "1/1 checks passed",
+      "status": "fail",
+      "summary": "0/1 checks passed",
       "checks": [
         {
           "id": "accounting_lake.no_stale_sources",
           "name": "every accounting lake source refreshed within 26h",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "sla_hours": 26
+          }
         }
       ],
       "flagged_jobs": [],
