@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_refresh",
-  "generated_at": "2026-10-13T12:10:42.882163+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-10-13T12:33:18.607835+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "12/13 sources validated",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 16.8,
+            "snapshot_age_hours": 17.2,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
