@@ -1,6 +1,6 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-10-14T00:33:20.162134+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-10-14T06:03:41.856902+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "10/13 sources validated",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 29.2,
+            "snapshot_age_hours": 34.7,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -319,14 +319,19 @@
     {
       "source": "vista_committed_po",
       "category": "accounting",
-      "status": "pass",
-      "summary": "3/3 checks passed",
+      "status": "fail",
+      "summary": "2/3 checks passed",
       "checks": [
         {
           "id": "vista_committed_po.freshness",
           "name": "accounting snapshot is recent",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "snapshot_age_hours": 18.3,
+            "sla_hours": 15,
+            "table_materialized_from_latest": true
+          }
         },
         {
           "id": "vista_committed_po.row_count",
@@ -422,18 +427,14 @@
     {
       "source": "smartsheet_eo",
       "category": "api",
-      "status": "fail",
-      "summary": "1/2 checks passed",
+      "status": "pass",
+      "summary": "2/2 checks passed",
       "checks": [
         {
           "id": "smartsheet_eo.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 12.4,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "smartsheet_eo.integrity",
