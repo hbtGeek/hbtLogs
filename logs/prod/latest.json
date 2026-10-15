@@ -1,11 +1,11 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-10-15T00:33:25.030405+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-10-15T06:03:48.796343+00:00",
   "environment": "prod",
-  "overall": "needs_attention",
-  "coverage": "10/13 sources validated",
+  "overall": "validated",
+  "coverage": "13/13 sources validated",
   "source_count": 13,
-  "passed": 10,
+  "passed": 13,
   "sources": [
     {
       "source": "jc_cost",
@@ -358,18 +358,14 @@
     {
       "source": "ado",
       "category": "api",
-      "status": "fail",
-      "summary": "3/4 checks passed",
+      "status": "pass",
+      "summary": "4/4 checks passed",
       "checks": [
         {
           "id": "ado.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 15.1,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "ado.work_items",
@@ -396,18 +392,14 @@
     {
       "source": "project_schedule",
       "category": "api",
-      "status": "fail",
-      "summary": "1/2 checks passed",
+      "status": "pass",
+      "summary": "2/2 checks passed",
       "checks": [
         {
           "id": "project_schedule.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 15.2,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "project_schedule.integrity",
@@ -422,18 +414,14 @@
     {
       "source": "smartsheet_eo",
       "category": "api",
-      "status": "fail",
-      "summary": "1/2 checks passed",
+      "status": "pass",
+      "summary": "2/2 checks passed",
       "checks": [
         {
           "id": "smartsheet_eo.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 15.2,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "smartsheet_eo.integrity",
