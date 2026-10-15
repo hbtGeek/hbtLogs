@@ -1,11 +1,11 @@
 {
   "trigger": "accounting_refresh",
-  "generated_at": "2026-10-15T11:01:18.251595+00:00",
+  "generated_at": "2026-10-15T11:46:22.024002+00:00",
   "environment": "prod",
-  "overall": "validated",
-  "coverage": "13/13 sources validated",
+  "overall": "needs_attention",
+  "coverage": "12/13 sources validated",
   "source_count": 13,
-  "passed": 13,
+  "passed": 12,
   "sources": [
     {
       "source": "jc_cost",
@@ -286,8 +286,8 @@
     {
       "source": "vista_job_financials",
       "category": "accounting",
-      "status": "pass",
-      "summary": "3/3 checks passed",
+      "status": "fail",
+      "summary": "2/3 checks passed",
       "checks": [
         {
           "id": "vista_job_financials.freshness",
@@ -305,7 +305,11 @@
           "id": "vista_job_financials.totals",
           "name": "column totals match the snapshot",
           "layer": "groundedness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "columns_checked": 5,
+            "materialized_from_latest": true
+          }
         }
       ],
       "flagged_jobs": [],
