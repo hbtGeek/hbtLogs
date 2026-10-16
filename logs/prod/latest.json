@@ -1,6 +1,6 @@
 {
   "trigger": "scheduled",
-  "generated_at": "2026-10-15T18:33:25.066046+00:00",
+  "generated_at": "2026-10-16T00:33:27.356759+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "12/13 sources validated",
