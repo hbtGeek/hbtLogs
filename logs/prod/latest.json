@@ -1,11 +1,11 @@
 {
   "trigger": "accounting_refresh",
-  "generated_at": "2026-10-16T14:01:05.789700+00:00",
+  "generated_at": "2026-10-16T14:31:08.696550+00:00",
   "environment": "prod",
-  "overall": "needs_attention",
-  "coverage": "12/13 sources validated",
+  "overall": "validated",
+  "coverage": "13/13 sources validated",
   "source_count": 13,
-  "passed": 12,
+  "passed": 13,
   "sources": [
     {
       "source": "jc_cost",
@@ -342,17 +342,14 @@
     {
       "source": "accounting_lake_freshness",
       "category": "accounting",
-      "status": "fail",
-      "summary": "0/1 checks passed",
+      "status": "pass",
+      "summary": "1/1 checks passed",
       "checks": [
         {
           "id": "accounting_lake.no_stale_sources",
           "name": "every accounting lake source refreshed within 26h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "sla_hours": 26
-          }
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
