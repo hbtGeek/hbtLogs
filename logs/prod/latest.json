@@ -1,6 +1,6 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-10-18T12:33:29.743960+00:00",
+  "trigger": "accounting_refresh",
+  "generated_at": "2026-10-18T14:38:28.302784+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "10/13 sources validated",
@@ -320,7 +320,7 @@
       "source": "vista_committed_po",
       "category": "accounting",
       "status": "fail",
-      "summary": "2/3 checks passed",
+      "summary": "0/3 checks passed",
       "checks": [
         {
           "id": "vista_committed_po.freshness",
@@ -337,13 +337,22 @@
           "id": "vista_committed_po.row_count",
           "name": "table row count matches the snapshot",
           "layer": "drift",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "snapshot_rows": 65476,
+            "table_rows": 65475,
+            "materialized_from_latest": true
+          }
         },
         {
           "id": "vista_committed_po.totals",
           "name": "column totals match the snapshot",
           "layer": "groundedness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "columns_checked": 4,
+            "materialized_from_latest": true
+          }
         }
       ],
       "flagged_jobs": [],
