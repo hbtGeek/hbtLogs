@@ -1,1 +1,0 @@
-{"sources":["vista_committed_po","vista_job_financials"],"note":"vista_committed_po: freshness failed (snapshot_age_hours=24.8, sla_hours=15); row_count failed (snapshot_rows=65494, table_rows=65479); totals failed (columns_checked=4).\nvista_job_financials: freshness failed (snapshot_age_hours=24.8, sla_hours=15).","run":"2026-10-20T18:54:50.087257+00:00"}
