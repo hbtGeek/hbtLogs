@@ -1,11 +1,11 @@
 {
   "trigger": "report_upload:vista",
-  "generated_at": "2026-10-22T15:10:07.951584+00:00",
+  "generated_at": "2026-10-22T15:15:06.618079+00:00",
   "environment": "prod",
-  "overall": "error",
-  "coverage": "9/13 sources validated",
+  "overall": "needs_attention",
+  "coverage": "10/13 sources validated",
   "source_count": 13,
-  "passed": 9,
+  "passed": 10,
   "sources": [
     {
       "source": "jc_cost",
@@ -114,14 +114,44 @@
     {
       "source": "contract_profit",
       "category": "upload",
-      "status": "error",
-      "summary": "0/1 checks passed",
+      "status": "pass",
+      "summary": "6/6 checks passed",
       "checks": [
         {
-          "id": "contract_profit.run",
-          "name": "validator ran",
-          "layer": "integrity",
-          "status": "error"
+          "id": "contract_profit.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.totals",
+          "name": "independent header-anchored totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -265,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 69.1,
+            "snapshot_age_hours": 69.2,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -298,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 69.1,
+            "snapshot_age_hours": 69.2,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
