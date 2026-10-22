@@ -1,6 +1,6 @@
 {
-  "trigger": "report_upload:vista",
-  "generated_at": "2026-10-22T15:17:28.540434+00:00",
+  "trigger": "report_upload:manpower_forecast",
+  "generated_at": "2026-10-22T15:17:41.594081+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "10/13 sources validated",
