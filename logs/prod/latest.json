@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_ingest",
-  "generated_at": "2026-10-23T18:04:01.583658+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-10-23T18:33:40.321370+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "10/13 sources validated",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 96.0,
+            "snapshot_age_hours": 96.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -328,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 96.0,
+            "snapshot_age_hours": 96.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
