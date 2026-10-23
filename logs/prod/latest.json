@@ -1,6 +1,6 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-10-23T18:33:40.321370+00:00",
+  "trigger": "report_upload:manpower_forecast",
+  "generated_at": "2026-10-23T18:34:23.801944+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "10/13 sources validated",
