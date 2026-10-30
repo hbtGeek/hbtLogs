@@ -1,6 +1,6 @@
 {
   "trigger": "report_upload:vista",
-  "generated_at": "2026-10-30T18:53:24.520533+00:00",
+  "generated_at": "2026-10-30T18:54:56.222242+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "9/13 sources validated",
