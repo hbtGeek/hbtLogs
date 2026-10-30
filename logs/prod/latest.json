@@ -1,11 +1,11 @@
 {
   "trigger": "report_upload:vista",
-  "generated_at": "2026-10-30T19:04:09.523368+00:00",
+  "generated_at": "2026-10-30T19:07:08.916418+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "8/13 sources validated",
+  "coverage": "9/13 sources validated",
   "source_count": 13,
-  "passed": 8,
+  "passed": 9,
   "sources": [
     {
       "source": "jc_cost",
@@ -160,8 +160,8 @@
     {
       "source": "jc_detail",
       "category": "upload",
-      "status": "fail",
-      "summary": "1/6 checks passed \u00b7 200 discrepancies",
+      "status": "pass",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "jc_detail.provenance",
@@ -173,69 +173,35 @@
           "id": "jc_detail.row_count",
           "name": "row count matches the file",
           "layer": "drift",
-          "status": "fail",
-          "metrics": {
-            "file_rows": 463,
-            "app_rows": 509
-          }
+          "status": "pass"
         },
         {
           "id": "jc_detail.fidelity",
           "name": "every transaction matches the file (verbatim)",
           "layer": "drift",
-          "status": "fail",
-          "metrics": {
-            "only_in_file": 463,
-            "only_in_app": 509
-          }
+          "status": "pass"
         },
         {
           "id": "jc_detail.totals",
           "name": "independent hours & cost totals match the app",
           "layer": "groundedness",
-          "status": "fail",
-          "metrics": {
-            "file_txns": 463
-          }
+          "status": "pass"
         },
         {
           "id": "jc_detail.completeness",
           "name": "app captured every transaction the CSV lists (parser-independent count)",
           "layer": "groundedness",
-          "status": "fail",
-          "metrics": {
-            "app_rows": 509
-          }
+          "status": "pass"
         },
         {
           "id": "jc_detail.freshness",
           "name": "the newest uploaded file has been loaded into the app",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "likely_the_loaded_source": false
-          }
+          "status": "pass"
         }
       ],
-      "flagged_jobs": [
-        "400.0155",
-        "400.7055",
-        "501.1708",
-        "534.0281",
-        "534.0288",
-        "534.0289",
-        "534.0290",
-        "534.0291",
-        "551.0225",
-        "551.0230",
-        "551.0237",
-        "551.0239",
-        "551.0242",
-        "534.0286",
-        "534.0287",
-        "534.0292"
-      ],
-      "discrepancy_count": 200
+      "flagged_jobs": [],
+      "discrepancy_count": 0
     },
     {
       "source": "efficiency",
