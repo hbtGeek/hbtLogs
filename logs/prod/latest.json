@@ -1,6 +1,6 @@
 {
-  "trigger": "report_upload:vista",
-  "generated_at": "2026-10-30T19:07:08.916418+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-10-31T00:33:28.607276+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "9/13 sources validated",
@@ -298,7 +298,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 265.0,
+            "snapshot_age_hours": 270.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -331,7 +331,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 265.0,
+            "snapshot_age_hours": 270.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
