@@ -1,11 +1,11 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-11-06T18:33:23.014952+00:00",
+  "trigger": "report_upload:vista",
+  "generated_at": "2026-11-06T22:11:51.858895+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "9/13 sources validated",
+  "coverage": "10/13 sources validated",
   "source_count": 13,
-  "passed": 9,
+  "passed": 10,
   "sources": [
     {
       "source": "jc_cost",
@@ -206,8 +206,8 @@
     {
       "source": "efficiency",
       "category": "upload",
-      "status": "fail",
-      "summary": "5/6 checks passed \u00b7 1 discrepancies",
+      "status": "pass",
+      "summary": "6/6 checks passed",
       "checks": [
         {
           "id": "efficiency.provenance",
@@ -231,10 +231,7 @@
           "id": "efficiency.fidelity",
           "name": "every value equals the file (verbatim)",
           "layer": "drift",
-          "status": "fail",
-          "metrics": {
-            "value_mismatches": 1
-          }
+          "status": "pass"
         },
         {
           "id": "efficiency.no_computed",
@@ -250,7 +247,7 @@
         }
       ],
       "flagged_jobs": [],
-      "discrepancy_count": 1
+      "discrepancy_count": 0
     },
     {
       "source": "manpower_forecast",
@@ -298,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 432.5,
+            "snapshot_age_hours": 436.1,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -331,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 432.5,
+            "snapshot_age_hours": 436.1,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
