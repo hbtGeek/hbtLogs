@@ -1,11 +1,11 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-11-12T00:33:23.675079+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-11-12T06:04:19.142294+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "7/13 sources validated",
+  "coverage": "10/13 sources validated",
   "source_count": 13,
-  "passed": 7,
+  "passed": 10,
   "sources": [
     {
       "source": "jc_cost",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 558.5,
+            "snapshot_age_hours": 564.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -328,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 558.5,
+            "snapshot_age_hours": 564.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -371,18 +371,14 @@
     {
       "source": "ado",
       "category": "api",
-      "status": "fail",
-      "summary": "3/4 checks passed",
+      "status": "pass",
+      "summary": "4/4 checks passed",
       "checks": [
         {
           "id": "ado.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 12.9,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "ado.work_items",
@@ -409,18 +405,14 @@
     {
       "source": "project_schedule",
       "category": "api",
-      "status": "fail",
-      "summary": "1/2 checks passed",
+      "status": "pass",
+      "summary": "2/2 checks passed",
       "checks": [
         {
           "id": "project_schedule.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 12.8,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "project_schedule.integrity",
@@ -435,18 +427,14 @@
     {
       "source": "smartsheet_eo",
       "category": "api",
-      "status": "fail",
-      "summary": "1/2 checks passed",
+      "status": "pass",
+      "summary": "2/2 checks passed",
       "checks": [
         {
           "id": "smartsheet_eo.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "fail",
-          "metrics": {
-            "age_hours": 12.8,
-            "sla_hours": 12
-          }
+          "status": "pass"
         },
         {
           "id": "smartsheet_eo.integrity",
