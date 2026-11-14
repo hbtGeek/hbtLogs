@@ -1,11 +1,11 @@
 {
-  "trigger": "scheduled",
-  "generated_at": "2026-11-14T00:33:29.024768+00:00",
+  "trigger": "accounting_ingest",
+  "generated_at": "2026-11-14T06:04:15.905221+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "10/13 sources validated",
+  "coverage": "9/13 sources validated",
   "source_count": 13,
-  "passed": 10,
+  "passed": 9,
   "sources": [
     {
       "source": "jc_cost",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 606.5,
+            "snapshot_age_hours": 612.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -328,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 606.5,
+            "snapshot_age_hours": 612.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -427,14 +427,18 @@
     {
       "source": "smartsheet_eo",
       "category": "api",
-      "status": "pass",
-      "summary": "2/2 checks passed",
+      "status": "fail",
+      "summary": "1/2 checks passed",
       "checks": [
         {
           "id": "smartsheet_eo.freshness",
           "name": "synced within 12h",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "age_hours": 17.0,
+            "sla_hours": 12
+          }
         },
         {
           "id": "smartsheet_eo.integrity",
