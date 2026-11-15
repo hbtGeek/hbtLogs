@@ -1,6 +1,6 @@
 {
-  "trigger": "accounting_ingest",
-  "generated_at": "2026-11-15T18:04:16.310477+00:00",
+  "trigger": "scheduled",
+  "generated_at": "2026-11-15T18:33:25.036281+00:00",
   "environment": "prod",
   "overall": "needs_attention",
   "coverage": "9/13 sources validated",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 648.0,
+            "snapshot_age_hours": 648.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -328,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 648.0,
+            "snapshot_age_hours": 648.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -436,7 +436,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "age_hours": 53.0,
+            "age_hours": 53.5,
             "sla_hours": 12
           }
         },
