@@ -1,8 +1,8 @@
 {
   "trigger": "report_upload:vista",
-  "generated_at": "2026-11-19T17:57:50.494430+00:00",
+  "generated_at": "2026-11-19T18:02:55.260010+00:00",
   "environment": "prod",
-  "overall": "error",
+  "overall": "needs_attention",
   "coverage": "8/13 sources validated",
   "source_count": 13,
   "passed": 8,
@@ -114,14 +114,44 @@
     {
       "source": "contract_profit",
       "category": "upload",
-      "status": "error",
-      "summary": "0/1 checks passed",
+      "status": "pass",
+      "summary": "6/6 checks passed",
       "checks": [
         {
-          "id": "contract_profit.run",
-          "name": "validator ran",
-          "layer": "integrity",
-          "status": "error"
+          "id": "contract_profit.provenance",
+          "name": "compared file is the one the app loaded",
+          "layer": "provenance",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.row_count",
+          "name": "row count matches the file",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.coverage",
+          "name": "every file row is present in the app",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.fidelity",
+          "name": "every value equals the file (verbatim)",
+          "layer": "drift",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.totals",
+          "name": "independent header-anchored totals match the app",
+          "layer": "groundedness",
+          "status": "pass"
+        },
+        {
+          "id": "contract_profit.freshness",
+          "name": "the newest uploaded file has been loaded into the app",
+          "layer": "freshness",
+          "status": "pass"
         }
       ],
       "flagged_jobs": [],
@@ -130,8 +160,8 @@
     {
       "source": "jc_detail",
       "category": "upload",
-      "status": "pass",
-      "summary": "6/6 checks passed",
+      "status": "fail",
+      "summary": "1/6 checks passed \u00b7 200 discrepancies",
       "checks": [
         {
           "id": "jc_detail.provenance",
@@ -143,35 +173,68 @@
           "id": "jc_detail.row_count",
           "name": "row count matches the file",
           "layer": "drift",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "file_rows": 392,
+            "app_rows": 442
+          }
         },
         {
           "id": "jc_detail.fidelity",
           "name": "every transaction matches the file (verbatim)",
           "layer": "drift",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "only_in_file": 392,
+            "only_in_app": 442
+          }
         },
         {
           "id": "jc_detail.totals",
           "name": "independent hours & cost totals match the app",
           "layer": "groundedness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "file_txns": 392
+          }
         },
         {
           "id": "jc_detail.completeness",
           "name": "app captured every transaction the CSV lists (parser-independent count)",
           "layer": "groundedness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "app_rows": 442
+          }
         },
         {
           "id": "jc_detail.freshness",
           "name": "the newest uploaded file has been loaded into the app",
           "layer": "freshness",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "likely_the_loaded_source": false
+          }
         }
       ],
-      "flagged_jobs": [],
-      "discrepancy_count": 0
+      "flagged_jobs": [
+        "400.7055",
+        "501.1708",
+        "534.0288",
+        "534.0289",
+        "534.0290",
+        "534.0291",
+        "534.0292",
+        "551.0225",
+        "551.0230",
+        "551.0237",
+        "551.0239",
+        "551.0242",
+        "551.0247",
+        "551.0262",
+        "551.0280"
+      ],
+      "discrepancy_count": 200
     },
     {
       "source": "efficiency",
@@ -265,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 743.9,
+            "snapshot_age_hours": 744.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -298,7 +361,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 743.9,
+            "snapshot_age_hours": 744.0,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
