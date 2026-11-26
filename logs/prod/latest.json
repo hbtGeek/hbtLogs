@@ -1,11 +1,11 @@
 {
   "trigger": "scheduled",
-  "generated_at": "2026-11-25T18:33:34.091605+00:00",
+  "generated_at": "2026-11-26T00:33:35.911204+00:00",
   "environment": "prod",
   "overall": "needs_attention",
-  "coverage": "9/13 sources validated",
+  "coverage": "8/13 sources validated",
   "source_count": 13,
-  "passed": 9,
+  "passed": 8,
   "sources": [
     {
       "source": "jc_cost",
@@ -295,7 +295,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 888.5,
+            "snapshot_age_hours": 894.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -328,7 +328,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "snapshot_age_hours": 888.5,
+            "snapshot_age_hours": 894.5,
             "sla_hours": 15,
             "table_materialized_from_latest": true
           }
@@ -436,7 +436,7 @@
           "layer": "freshness",
           "status": "fail",
           "metrics": {
-            "age_hours": 293.5,
+            "age_hours": 299.5,
             "sla_hours": 12
           }
         },
@@ -453,14 +453,19 @@
     {
       "source": "entra",
       "category": "api",
-      "status": "pass",
-      "summary": "1/1 checks passed",
+      "status": "fail",
+      "summary": "0/1 checks passed",
       "checks": [
         {
           "id": "entra.identity",
           "name": "active mappings present, no duplicate identity keys",
           "layer": "integrity",
-          "status": "pass"
+          "status": "fail",
+          "metrics": {
+            "active_mappings": 189,
+            "duplicate_entra_oid": 1,
+            "duplicate_azure_email": 0
+          }
         }
       ],
       "flagged_jobs": [],
